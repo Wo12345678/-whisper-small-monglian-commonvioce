@@ -51,7 +51,6 @@ This repository presents a fine - tuned version of the openai/whisper-small mode
 
 ## Training hyperparameters
 The following hyperparameters were used during training:
-
 - learning_rate: 1.5e-5
 - train_batch_size: 16
 - eval_batch_size: 16
@@ -63,7 +62,7 @@ The following hyperparameters were used during training:
 - training_steps: 3500
 - mixed_precision_training: FP16
 
-- Applications
+## Applications
 - This fine - tuned model can be applied in various Mongolian language - related fields, such as:
 - Speech Recognition Systems: Providing accurate transcription of Mongolian speech in real - time or offline scenarios.
 - Language Learning Platforms: Helping learners improve their listening and speaking skills in Mongolian.
