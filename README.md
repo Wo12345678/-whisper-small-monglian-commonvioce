@@ -1,7 +1,7 @@
-Whisper Small Fine - Tuned with Mongolian Speech Dataset
-Overview
+## Whisper Small Fine - Tuned with Mongolian Speech Dataset
+## Overview
 This repository presents a fine - tuned version of the openai/whisper-small model specifically tailored to the Mongolian Speech Dataset. The fine - tuning process has significantly enhanced the model's performance in transcribing Mongolian speech, making it a valuable asset for applications in Mongolian language processing.
-Performance Metrics
+## Performance Metrics
 | Metric         | Value     |
 |----------------|-----------|
 | Loss           | 0.0192 |
