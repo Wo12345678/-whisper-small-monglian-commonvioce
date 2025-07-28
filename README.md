@@ -1,10 +1,7 @@
--whisper-small-monglian-commonvioce
 Whisper Small Fine - Tuned with Mongolian Speech Dataset
-# Whisper Small Fine-tuned with Mongolian Speech Dataset
-
-This model is a fine-tuned version of openai/whisper-small on the Mongolian Speech Dataset dataset.
-It achieves the following results on the test set:
-
+Overview
+This repository presents a fine - tuned version of the openai/whisper-small model specifically tailored to the Mongolian Speech Dataset. The fine - tuning process has significantly enhanced the model's performance in transcribing Mongolian speech, making it a valuable asset for applications in Mongolian language processing.
+Performance Metrics
 | Metric         | Value     |
 |----------------|-----------|
 | Loss           | 0.0192 |
@@ -65,3 +62,36 @@ The following hyperparameters were used during training:
 - lr_scheduler_warmup_steps: 400
 - training_steps: 3500
 - mixed_precision_training: FP16
+
+- Training Hyperparameters
+The following hyperparameters were carefully selected and used during the training process:
+Learning Rate: 1.5e - 5
+This learning rate was chosen to ensure a stable and efficient learning process. A too - large learning rate may cause the model to diverge, while a too - small one may lead to slow convergence.
+Train Batch Size: 16
+The batch size affects the efficiency of the training process and the generalization ability of the model. A batch size of 16 was found to be optimal for this task.
+Eval Batch Size: 16
+Consistent with the train batch size, it ensures fair evaluation during the training process.
+Gradient Accumulation Steps: 12
+This technique allows for effective use of limited GPU memory by accumulating gradients over multiple steps before performing an optimization step.
+Total Train Batch Size: 192
+Calculated based on the train batch size and gradient accumulation steps, it reflects the overall batch size for each optimization step.
+Optimizer: AdamW with betas=(0.9, 0.999) and epsilon = 1e - 08
+AdamW is a widely used optimizer that combines the advantages of Adam and weight decay, which helps prevent overfitting.
+LR Scheduler Type: linear
+A linear learning rate scheduler gradually decreases the learning rate over training steps, which is beneficial for the model to converge to a better solution.
+LR Scheduler Warmup Steps: 400
+The warmup steps help the model adapt to the data in the early stages of training and avoid large fluctuations in the learning process.
+Training Steps: 3500
+This number of training steps was determined based on the model's performance on the validation set, ensuring sufficient training without overfitting.
+Mixed Precision Training: FP16
+Mixed precision training using FP16 significantly reduces the memory usage and speeds up the training process without sacrificing much accuracy.
+Applications
+This fine - tuned model can be applied in various Mongolian language - related fields, such as:
+Speech Recognition Systems: Providing accurate transcription of Mongolian speech in real - time or offline scenarios.
+Language Learning Platforms: Helping learners improve their listening and speaking skills in Mongolian.
+Accessibility Tools: Making Mongolian audio content more accessible to people with hearing impairments.
+Future Work
+Further Fine - Tuning: Explore additional data sources and fine - tuning techniques to further improve the model's performance.
+Multilingual Integration: Integrate the model with other language models to support multilingual speech processing.
+Deployment Optimization: Optimize the model for deployment on different platforms, such as mobile devices and cloud servers.
+This project showcases my skills in model fine - tuning, hyperparameter optimization, and performance evaluation, which are essential for developing high - quality deep learning models.
